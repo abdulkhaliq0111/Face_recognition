@@ -17,7 +17,7 @@ One problem is that the Dlib face detector misses some of the hard examples (par
 
 We can use the mtcnn library to create a face detector and extract faces for our use with the FaceNet face detector models in subsequent sections.
 
-# Preprocessng
+# Preprocessing
 
 The first step is to load an image as a NumPy array, which we can achieve using the PIL library and the open() function. We will also convert the image to RGB, just in case the image has an alpha channel or is black and white.
 
@@ -42,7 +42,7 @@ It is a good practice to normalize the face embedding vectors. It is a good prac
 
 In this context, vector normalization means scaling the values until the length or magnitude of the vectors is 1 or unit length. This can be achieved using the Normalizer class in scikit-learn. It might even be more convenient to perform this step when the face embeddings are created in the previous step.
 
-# Evaluaton
+# Evaluation
 First, we need to select a random example from the test set, then get the embedding, face pixels, expected class prediction, and the corresponding name for the class.
 Next, we can use the face embedding as an input to make a single prediction with the fit model.
 We predict both the class integer and the probability of the prediction.
